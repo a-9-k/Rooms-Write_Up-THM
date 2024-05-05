@@ -37,7 +37,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 40.53 seconds
 ```
 Now, we have some services that are running in the machine.
-# Enumerating this services 
+# Enumerating this services: 
 
 ![Screenshot_22](https://github.com/a-9-k/Rooms-Write_Up-THM/assets/53786047/7c256c8a-fad5-4434-867a-f278095acd9d)
 
@@ -106,7 +106,7 @@ style.css
 under-construction.html
 
 ```
-# stabilize the reverse shell 
+# stabilize the reverse shell :
 ```sh
 python3 -c 'import pty;pty.spawn("/bin/bash")'
 Press CTRL + Z to background process and get back to your host machine
