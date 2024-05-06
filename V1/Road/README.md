@@ -2,7 +2,7 @@
 ```sh
 export IP=M_ip
 ```
-# Information Gathering:
+# Enumeration:
 
 ```sh
 nmap -A -sC -sV $IP
