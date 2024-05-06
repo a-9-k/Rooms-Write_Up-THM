@@ -1,6 +1,6 @@
 # Athena :
 ```sh
-export IP=room-ip
+export IP= M-ip
 ```
 # Information Gathering: 
 
