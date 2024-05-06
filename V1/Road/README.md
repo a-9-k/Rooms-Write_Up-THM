@@ -23,7 +23,7 @@ PORT   STATE SERVICE VERSION
 |_http-title: Sky Couriers
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
-in the first dir bruteforce:
+# In the first dir bruteforce:
 
 ```sh
 gobuster dir -u http://10.10.0.79 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
@@ -31,7 +31,7 @@ gobuster dir -u http://10.10.0.79 -w /usr/share/dirbuster/wordlists/directory-li
 ```sh
 /v2                   (Status: 301) [Size: 305] [--> http://10.10.0.79/v2/]
 ```
-in the second dir bruteforce:
+# In the second dir bruteforce:
 ```sh
 gobuster dir -u http://10.10.0.79/v2 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
 ```
@@ -62,6 +62,8 @@ That might get us to manipulate the php-reverse-shell extension to be .php inste
 This is the dir that has our revshell i found it in the admin  /profile.php  source code 
 
 ![Screenshot_29](https://github.com/a-9-k/TryHackMe-Write_Ups/assets/53786047/cb24afb2-0e7a-48e7-ac78-6ea2f4e66395)
+
+# Initial Access
 
 ```sh
 nc -lvnp 4444             
