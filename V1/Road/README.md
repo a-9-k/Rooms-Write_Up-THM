@@ -1,6 +1,6 @@
 # Road
 ```sh
-export IP=machine_ip
+export IP=M_ip
 ```
 # Information Gathering:
 
